@@ -1,0 +1,4 @@
+#!/bin/bash
+
+`dirname "$0"`/setup-jupyter
+`dirname "$0"`/setup-julia
