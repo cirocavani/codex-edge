@@ -1,11 +1,5 @@
 println("Setup...\n")
 
-function install(pkgname::AbstractString)
-    println("Installing ", pkgname, "...")
-    Pkg.add(pkgname)
-    println()
-end
-
 deps = [
     "ArgParse",
     "DataFrames",
@@ -23,10 +17,22 @@ deps = [
 Pkg.init()
 Pkg.update()
 println()
-map(install, deps)
+foreach(deps) do pkgname
+    println("Installing ", pkgname, "...")
+    Pkg.add(pkgname)
+    println()
+end
 
 println("Force precompilation...")
-map(require, map(symbol, deps))
+foreach(deps) do pkgname
+    println("Precompiling ", pkgname, "...")
+    try
+        Base.compilecache(pkgname)
+    catch
+        println("... error!")
+    end
+    println()
+end
 
 println("Force IJulia kernel install...")
 Pkg.build("IJulia")

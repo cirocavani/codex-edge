@@ -8,6 +8,6 @@ Run `bin/setup`.
 
 ## Jupyter
 
-Run `bin/jupyter-start`.
+Run `bin/jupyter-notebook`.
 
 Open http://localhost:8888/ in a Web Browser.

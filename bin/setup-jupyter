@@ -9,7 +9,7 @@ export JUPYTER_ENV=$JUPYTER_HOME/codex-edge
 export JUPYTER_DATA_DIR=$JUPYTER_HOME/data
 mkdir -p $JUPYTER_DATA_DIR
 
-virtualenv -p python2.7 $JUPYTER_ENV
+virtualenv -p python3 $JUPYTER_ENV
 source $JUPYTER_ENV/bin/activate
 
 pip install --upgrade jupyter
