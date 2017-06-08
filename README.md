@@ -1,4 +1,4 @@
-# Codex Edge
+# Julia Project Template
 
 Simple project structure for [Julia](http://julialang.org/) project with [Jupyter](http://jupyter.org/).
 
