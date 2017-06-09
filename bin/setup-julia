@@ -1,5 +1,22 @@
 #!/bin/bash
 
-source `dirname "$0"`/../conf/env.sh
+cd $(dirname "$0")/..
+source conf/env.sh
+source $CONDA_HOME/bin/activate
 
-julia $CODEX_HOME/src/setup.jl
+mkdir -p .cache
+
+if [ ! -f .cache/julia-0.5.2-linux-x86_64.tar.gz ]; then
+    curl -k -L \
+        https://julialang-s3.julialang.org/bin/linux/x64/0.5/julia-0.5.2-linux-x86_64.tar.gz \
+        -o .cache/julia-0.5.2-linux-x86_64.tar.gz
+fi
+
+rm -rf $JULIA_BIN
+mkdir -p $JULIA_BIN
+
+tar zxf .cache/julia-0.5.2-linux-x86_64.tar.gz -C $JULIA_BIN --strip-components=1
+
+rm -rf $JULIA_PKGDIR
+
+$JULIA_BIN/bin/julia src/setup.jl

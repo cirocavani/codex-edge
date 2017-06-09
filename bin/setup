@@ -1,4 +1,6 @@
 #!/bin/bash
 
-`dirname "$0"`/setup-jupyter
-`dirname "$0"`/setup-julia
+cd $(dirname "$0")/..
+
+bin/setup-conda
+bin/setup-julia

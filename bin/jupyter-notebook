@@ -1,5 +1,8 @@
 #!/bin/bash
 
-source `dirname "$0"`/../conf/env.sh
+cd $(dirname "$0")/..
 
-jupyter notebook --no-browser --notebook-dir=$CODEX_HOME/notebook
+source conf/env.sh
+source $CONDA_HOME/bin/activate
+
+$CONDA_HOME/bin/jupyter notebook --notebook-dir=workspace $@
