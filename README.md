@@ -6,6 +6,10 @@ Simple project structure for [Julia](http://julialang.org/) project with [Jupyte
 
 Run `bin/setup`.
 
+## REPL
+
+Run `bin/julia-repl`.
+
 ## Jupyter
 
 Run `bin/jupyter-notebook`.
