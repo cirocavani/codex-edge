@@ -10,8 +10,7 @@ deps = [
     "Requests",
     "JSON",
     "Interact",
-    "Escher",
-    "ComposeDiff",
+    "JuliaWebAPI",
 ]
 
 Pkg.init()
@@ -23,7 +22,7 @@ foreach(deps) do pkgname
     println()
 end
 
-println("Force precompilation...")
+println("Force precompilation...\n")
 foreach(deps) do pkgname
     println("Precompiling ", pkgname, "...")
     try
@@ -37,4 +36,4 @@ end
 println("Force IJulia kernel install...")
 Pkg.build("IJulia")
 
-println("Setup done.")
+println("\nSetup done.")
