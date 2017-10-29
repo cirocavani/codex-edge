@@ -6,16 +6,18 @@ source $CONDA_HOME/bin/activate
 
 mkdir -p .cache
 
-if [ ! -f .cache/julia-0.6.0-linux-x86_64.tar.gz ]; then
+JULIA_PKG=julia-0.6.1-linux-x86_64.tar.gz
+
+if [ ! -f .cache/$JULIA_PKG ]; then
     curl -k -L \
-        https://julialang-s3.julialang.org/bin/linux/x64/0.6/julia-0.6.0-linux-x86_64.tar.gz \
-        -o .cache/julia-0.6.0-linux-x86_64.tar.gz
+        https://julialang-s3.julialang.org/bin/linux/x64/0.6/$JULIA_PKG \
+        -o .cache/$JULIA_PKG
 fi
 
 rm -rf $JULIA_BIN
 mkdir -p $JULIA_BIN
 
-tar zxf .cache/julia-0.6.0-linux-x86_64.tar.gz -C $JULIA_BIN --strip-components=1
+tar zxf .cache/$JULIA_PKG -C $JULIA_BIN --strip-components=1
 
 rm -rf $JULIA_PKGDIR
 
