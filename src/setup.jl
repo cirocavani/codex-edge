@@ -5,12 +5,10 @@ deps = [
     "DataFrames",
     "Humanize",
     "IJulia",
-    "Gadfly",
-    "Cairo",
-    "Requests",
-    "JSON",
     "Interact",
-    "JuliaWebAPI",
+    "Plots",
+    "HTTP",
+    "JSON",
 ]
 
 Pkg.init()
