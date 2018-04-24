@@ -21,4 +21,4 @@ tar zxf .cache/$JULIA_PKG -C $JULIA_BIN --strip-components=1
 
 rm -rf $JULIA_PKGDIR
 
-$JULIA_BIN/bin/julia src/setup.jl
+$JULIA_BIN/bin/julia setup/setup.jl

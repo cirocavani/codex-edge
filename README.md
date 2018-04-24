@@ -4,7 +4,7 @@ Simple project structure for [Julia](http://julialang.org/) project with [Jupyte
 
 ## Setup
 
-Run `bin/setup`.
+Run `setup/install.sh`.
 
 ## REPL
 
@@ -12,6 +12,6 @@ Run `bin/julia-repl`.
 
 ## Jupyter
 
-Run `bin/jupyter-notebook`.
+Run `bin/jupyter-lab`.
 
 Open http://localhost:8888/ in a Web Browser.

@@ -5,4 +5,4 @@ cd $(dirname "$0")/..
 source conf/env.sh
 source $CONDA_HOME/bin/activate
 
-$CONDA_HOME/bin/jupyter notebook --notebook-dir=workspace $@
+$JULIA_BIN/bin/julia src/main.jl $@

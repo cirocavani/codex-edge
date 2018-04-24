@@ -5,7 +5,6 @@ deps = [
     "DataFrames",
     "Humanize",
     "IJulia",
-    "Interact",
     "Plots",
     "HTTP",
     "JSON",
