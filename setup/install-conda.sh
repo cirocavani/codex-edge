@@ -5,7 +5,7 @@ source conf/env.sh
 
 mkdir -p .cache
 
-CONDA_PKG=Miniconda3-4.4.10-Linux-x86_64.sh
+CONDA_PKG=Miniconda3-4.5.1-Linux-x86_64.sh
 
 if [ ! -f .cache/$CONDA_PKG ]; then
     curl -k -L \
