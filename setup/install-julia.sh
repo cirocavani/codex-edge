@@ -6,7 +6,7 @@ source $CONDA_HOME/bin/activate
 
 mkdir -p .cache
 
-JULIA_PKG=julia-0.6.2-linux-x86_64.tar.gz
+JULIA_PKG=julia-0.6.3-linux-x86_64.tar.gz
 
 if [ ! -f .cache/$JULIA_PKG ]; then
     curl -k -L \
