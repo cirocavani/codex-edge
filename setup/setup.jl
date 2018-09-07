@@ -1,13 +1,13 @@
 println("Setup...\n")
 
 deps = [
-    "ArgParse",
-    "DataFrames",
-    "Humanize",
     "IJulia",
-    "Plots",
+    "VegaLite",
     "HTTP",
     "JSON",
+    "ArgParse",
+    "Humanize",
+    "DataFrames",
 ]
 
 Pkg.init()
