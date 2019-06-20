@@ -1,8 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -eu
 
 cd $(dirname "$0")/..
-
 source conf/env.sh
-source $CONDA_HOME/bin/activate
 
-$JULIA_BIN/bin/julia $@
+$JULIA_INSTDIR/bin/julia $@
